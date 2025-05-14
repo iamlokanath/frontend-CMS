@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/personalized-message';
+const API_URL = 'https://backend-cms-seven.vercel.app/personalized-message';
 
 const defaultInput = {
     name: 'John Doe',
