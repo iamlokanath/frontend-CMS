@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Stack, TextField, Button, Box, Typography, Paper } from '@mui/material';
 
 const API_URL = 'http://localhost:5000/personalized-message';
 
@@ -37,24 +36,23 @@ const MessageGenerator: React.FC = () => {
     };
 
     return (
-        <Box>
-            <form onSubmit={handleSubmit}>
-                <Stack spacing={2}>
-                    <TextField name="name" label="Name" value={input.name} onChange={handleChange} required fullWidth />
-                    <TextField name="job_title" label="Job Title" value={input.job_title} onChange={handleChange} required fullWidth />
-                    <TextField name="company" label="Company" value={input.company} onChange={handleChange} required fullWidth />
-                    <TextField name="location" label="Location" value={input.location} onChange={handleChange} required fullWidth />
-                    <TextField name="summary" label="Summary" value={input.summary} onChange={handleChange} required fullWidth multiline minRows={2} />
-                    <Button type="submit" variant="contained" color="primary" disabled={loading} size="large">{loading ? 'Generating...' : 'Generate Message'}</Button>
-                </Stack>
+        <div>
+            <h2>LinkedIn Message Generator</h2>
+            <form onSubmit={handleSubmit} style={{ marginBottom: 20 }}>
+                <input name="name" placeholder="Name" value={input.name} onChange={handleChange} required />
+                <input name="job_title" placeholder="Job Title" value={input.job_title} onChange={handleChange} required />
+                <input name="company" placeholder="Company" value={input.company} onChange={handleChange} required />
+                <input name="location" placeholder="Location" value={input.location} onChange={handleChange} required />
+                <textarea name="summary" placeholder="Summary" value={input.summary} onChange={handleChange} required />
+                <button type="submit" disabled={loading}>{loading ? 'Generating...' : 'Generate Message'}</button>
             </form>
             {message && (
-                <Paper elevation={2} sx={{ background: '#f0f4ff', p: 2, borderRadius: 2, mt: 3 }}>
-                    <Typography variant="subtitle1" fontWeight={600} gutterBottom>Generated Message:</Typography>
-                    <Typography variant="body1">{message}</Typography>
-                </Paper>
+                <div style={{ background: '#f0f0f0', padding: 10, borderRadius: 4 }}>
+                    <strong>Generated Message:</strong>
+                    <p>{message}</p>
+                </div>
             )}
-        </Box>
+        </div>
     );
 };
 
