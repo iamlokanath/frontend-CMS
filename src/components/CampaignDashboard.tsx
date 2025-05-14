@@ -10,7 +10,7 @@ type Campaign = {
     accountIDs: string[];
 };
 
-const API_URL = 'http://localhost:5000/campaigns';
+const API_URL = 'https://backend-cms-seven.vercel.app/campaigns';
 
 const CampaignDashboard: React.FC = () => {
     const [campaigns, setCampaigns] = useState<Campaign[]>([]);
