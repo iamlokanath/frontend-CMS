@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <LandingPage />
-      <h1>Campaign Management</h1>
+      <hr />
       <CampaignDashboard />
       <hr />
       <MessageGenerator />
