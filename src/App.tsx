@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import CampaignDashboard from './components/CampaignDashboard';
-import MessageGenerator from './components/MessageGenerator';
-import Navbar from './components/Navbar';
-import LandingPage from './components/LandingPage';
+import CampaignDashboard from './pages/CampaignDashboard';
+import MessageGenerator from './pages/MessageGenerator';
+import Navbar from './components/layouts/Navbar';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
