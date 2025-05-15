@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../components/styles/CampaignDashboard.css';
-
+import Navbar from '../components/layouts/Navbar';
+// import '../components/styles/Home.css';
 type Campaign = {
     _id?: string;
     name: string;
@@ -91,6 +92,10 @@ const CampaignDashboard: React.FC = () => {
         : campaigns.filter(c => c.status === filterStatus);
 
     return (
+        <>
+        <div className='App'>
+            
+        <Navbar />
         <div className="dashboard-container">
             <div className="dashboard-header">
                 <h2>Campaign Management</h2>
@@ -298,6 +303,10 @@ const CampaignDashboard: React.FC = () => {
                 )}
             </div>
         </div>
+        
+        </div>
+        
+        </>
     );
 };
 

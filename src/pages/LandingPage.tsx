@@ -12,10 +12,10 @@ const LandingPage: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore animi, repudiandae iusto sint facere placeat cumque impedit ipsam alias.
         </p>
         <div className="cta-buttons">
-          <a href="/">
+          <a href="/campaign">
           <button className="primary-btn">Create Campaign</button>
           </a>
-          <a href="/">
+          <a href="/message">
           <button className="secondary-btn">Generate Message</button>
           </a>
         </div>

@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
 
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a href="/">Home</a>
-        <a href="/">Campaign</a>
-        <a href="/">Message Generator</a>
+        <a href="/campaign">Campaign</a>
+        <a href="/message">Message Generator</a>
       </div>
 
       <button className="signup-btn">Contact Us</button>
