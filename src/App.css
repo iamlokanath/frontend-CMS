@@ -3,7 +3,7 @@ body {
 }
 
 .App {
-  max-width: 900px;
+  width: 80%;
   margin: 0 auto;
   padding: 24px;
 }

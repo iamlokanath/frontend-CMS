@@ -1,0 +1,107 @@
+.landing {
+  padding: 2rem;
+  background-color: #f8fbfc;
+  font-family: sans-serif;
+}
+
+.landing-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #03363d;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.primary-btn {
+  background-color: #03363d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #03363d;
+  border: 1px solid #ccc;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rating {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.stars {
+  color: gold;
+  margin-right: 0.5rem;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.dark-card {
+  background-color: #03363d;
+  color: white;
+}
+
+.green-card {
+  background-color: #e5fdd6;
+}
+
+.light-card {
+  background-color: #f0f4f8;
+}
+
+.growth {
+  color: green;
+  font-weight: bold;
+}
+
+.increase {
+  color: green;
+}
