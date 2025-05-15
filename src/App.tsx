@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import { CampaignDashboard, MessageGenerator } from './components';
 import Navbar from './components/layouts/Navbar';
 import LandingPage from './pages/LandingPage';
+import Footer from './components/layouts/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/landing" element={<LandingPage />}/>
           
           <Route path="/navbar" element={<Navbar />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
       </BrowserRouter>
   );
