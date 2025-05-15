@@ -93,7 +93,7 @@ const CampaignDashboard: React.FC = () => {
 
     return (
         <>
-        <div className='App'>
+        <div className='campaign-dashboard'>
             
         <Navbar />
         <div className="dashboard-container">
