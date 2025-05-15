@@ -20,10 +20,10 @@ h1 {
 }
 
 .subtitle {
-  color: #555;
-  margin-bottom: 1.5rem;
-  max-width: 600px;
-  margin-inline: auto;
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .cta-buttons {

@@ -52,7 +52,7 @@ const MessageGenerator: React.FC = () => {
 
     return (
         <>
-            <div className='App'>
+            <div className='message-generator'>
                 <Navbar />
 
                 <div className="generator-container">

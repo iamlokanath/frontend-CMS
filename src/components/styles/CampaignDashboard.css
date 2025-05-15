@@ -1,3 +1,8 @@
+.campaign-dashboard{
+    width: 80%;
+    margin: 0 auto;
+    padding: 24px;
+}
 .dashboard-container {
   padding: 2rem;
   background-color: #f8fbfc;
