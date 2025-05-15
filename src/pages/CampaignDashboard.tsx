@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './CampaignDashboard.css';
+import '../components/styles/CampaignDashboard.css';
 
 type Campaign = {
     _id?: string;
@@ -86,8 +86,8 @@ const CampaignDashboard: React.FC = () => {
         }
     };
 
-    const filteredCampaigns = filterStatus === 'all' 
-        ? campaigns 
+    const filteredCampaigns = filterStatus === 'all'
+        ? campaigns
         : campaigns.filter(c => c.status === filterStatus);
 
     return (
@@ -97,9 +97,9 @@ const CampaignDashboard: React.FC = () => {
                 <div className="dashboard-actions">
                     <div className="filter-container">
                         <label htmlFor="filter">Filter:</label>
-                        <select 
-                            id="filter" 
-                            value={filterStatus} 
+                        <select
+                            id="filter"
+                            value={filterStatus}
                             onChange={(e) => setFilterStatus(e.target.value as 'all' | 'active' | 'inactive')}
                             className="filter-select"
                         >
@@ -108,8 +108,8 @@ const CampaignDashboard: React.FC = () => {
                             <option value="inactive">Inactive</option>
                         </select>
                     </div>
-                    <button 
-                        className="primary-btn create-btn" 
+                    <button
+                        className="primary-btn create-btn"
                         onClick={() => {
                             setForm({ name: '', description: '', status: 'active', leads: [], accountIDs: [] });
                             setEditingId(null);
@@ -129,35 +129,35 @@ const CampaignDashboard: React.FC = () => {
                     <form onSubmit={handleSubmit} className="campaign-form">
                         <div className="form-group">
                             <label htmlFor="name">Campaign Name</label>
-                            <input 
+                            <input
                                 id="name"
-                                name="name" 
-                                placeholder="Enter campaign name" 
-                                value={form.name || ''} 
-                                onChange={handleChange} 
-                                required 
+                                name="name"
+                                placeholder="Enter campaign name"
+                                value={form.name || ''}
+                                onChange={handleChange}
+                                required
                             />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="description">Description</label>
-                            <textarea 
+                            <textarea
                                 id="description"
-                                name="description" 
-                                placeholder="Enter campaign description" 
-                                value={form.description || ''} 
-                                onChange={handleChange} 
-                                required 
+                                name="description"
+                                placeholder="Enter campaign description"
+                                value={form.description || ''}
+                                onChange={handleChange}
+                                required
                                 rows={3}
                             />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="status">Status</label>
-                            <select 
+                            <select
                                 id="status"
-                                name="status" 
-                                value={form.status} 
+                                name="status"
+                                value={form.status}
                                 onChange={handleChange}
                             >
                                 <option value="active">Active</option>
@@ -167,23 +167,23 @@ const CampaignDashboard: React.FC = () => {
 
                         <div className="form-group">
                             <label htmlFor="leads">Leads (comma separated)</label>
-                            <input 
+                            <input
                                 id="leads"
-                                name="leads" 
-                                placeholder="e.g., linkedin.com/in/user1, linkedin.com/in/user2" 
-                                value={form.leads?.join(',') || ''} 
-                                onChange={e => handleArrayChange(e, 'leads')} 
+                                name="leads"
+                                placeholder="e.g., linkedin.com/in/user1, linkedin.com/in/user2"
+                                value={form.leads?.join(',') || ''}
+                                onChange={e => handleArrayChange(e, 'leads')}
                             />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="accountIDs">Account IDs (comma separated)</label>
-                            <input 
+                            <input
                                 id="accountIDs"
-                                name="accountIDs" 
-                                placeholder="e.g., acc123, acc456" 
-                                value={form.accountIDs?.join(',') || ''} 
-                                onChange={e => handleArrayChange(e, 'accountIDs')} 
+                                name="accountIDs"
+                                placeholder="e.g., acc123, acc456"
+                                value={form.accountIDs?.join(',') || ''}
+                                onChange={e => handleArrayChange(e, 'accountIDs')}
                             />
                         </div>
 
@@ -191,9 +191,9 @@ const CampaignDashboard: React.FC = () => {
                             <button type="submit" className="primary-btn">
                                 {editingId ? 'Update Campaign' : 'Create Campaign'}
                             </button>
-                            <button 
-                                type="button" 
-                                className="secondary-btn" 
+                            <button
+                                type="button"
+                                className="secondary-btn"
                                 onClick={() => {
                                     setIsFormVisible(false);
                                     setEditingId(null);
@@ -222,7 +222,7 @@ const CampaignDashboard: React.FC = () => {
                                 </div>
                             </div>
                             <p className="campaign-description">{c.description}</p>
-                            
+
                             <div className="campaign-details">
                                 <div className="detail-group">
                                     <div className="detail-label">Leads:</div>
@@ -247,7 +247,7 @@ const CampaignDashboard: React.FC = () => {
                                         )}
                                     </div>
                                 </div>
-                                
+
                                 <div className="detail-group">
                                     <div className="detail-label">Account IDs:</div>
                                     <div className="detail-value">
@@ -272,22 +272,22 @@ const CampaignDashboard: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="campaign-actions">
-                                <button 
-                                    className="action-btn toggle-btn" 
+                                <button
+                                    className="action-btn toggle-btn"
                                     onClick={() => handleToggleStatus(c)}
                                 >
                                     {c.status === 'active' ? 'Deactivate' : 'Activate'}
                                 </button>
-                                <button 
-                                    className="action-btn edit-btn" 
+                                <button
+                                    className="action-btn edit-btn"
                                     onClick={() => handleEdit(c)}
                                 >
                                     Edit
                                 </button>
-                                <button 
-                                    className="action-btn delete-btn" 
+                                <button
+                                    className="action-btn delete-btn"
                                     onClick={() => handleDelete(c._id!)}
                                 >
                                     Delete

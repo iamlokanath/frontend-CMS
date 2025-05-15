@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
 
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Services</a>
+        <a href="/">Campaign</a>
+        <a href="/">Message Generator</a>
       </div>
 
       <button className="signup-btn">Contact Us</button>

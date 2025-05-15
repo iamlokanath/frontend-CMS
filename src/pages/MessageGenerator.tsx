@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './MessageGenerator.css';
+import '../components/styles/MessageGenerator.css';
 
 const API_URL = 'https://backend-cms-seven.vercel.app/personalized-message';
 

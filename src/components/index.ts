@@ -1,2 +1,2 @@
-export { default as CampaignDashboard } from './CampaignDashboard';
-export { default as MessageGenerator } from './MessageGenerator'; 
+export { default as CampaignDashboard } from '../pages/CampaignDashboard';
+export { default as MessageGenerator } from '../pages/MessageGenerator'; 
