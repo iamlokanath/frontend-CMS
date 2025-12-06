@@ -49,9 +49,9 @@ const Footer: React.FC = () => {
 
         </div>
       </div>
-      <div className="footer-bottom">
+      {/* <div className="footer-bottom">
         <p>© Campaign Manager 2025. All Rights Reserved. Website is designed and developed by Lokanath Panda</p>
-      </div>
+      </div> */}
     </footer>
   );
 };
